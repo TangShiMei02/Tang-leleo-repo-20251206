@@ -1,0 +1,50 @@
+好的，30 秒开干 twikoo-official！命令流走起：
+① 网页建空仓库（10 s）
+https://github.com/new
+名字：twikoo-official → 不要 README → Create
+→ 保留页面，待会复制两段地址。
+② 终端敲（一行一回车）
+bash
+
+
+
+复制
+
+D:
+
+cd D:\→文件←\mycode
+
+git clone git@github.com:TangShiMei02/twikoo-official.git
+
+cd twikoo-official
+
+git remote add https https://github.com/TangShiMei02/twikoo-official.git
+
+echo # twikoo-official > README.md
+
+git config user.name "TangShiMei02"
+
+git config user.email "2244182951@qq.com"
+
+git add README.md
+
+git commit -m "init"
+
+
+
+③ 双推验收
+bash
+
+
+复制
+
+git push origin main
+
+git push https main
+
+
+
+把最后两行结果（main -> main 或 up-to-date）贴回来，立刻收工！
+开始敲第一条命令 🚀
+
+
