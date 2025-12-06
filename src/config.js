@@ -8,7 +8,7 @@ const config = {
 	},
 
 	avatar: "/img/avatar02.jpg", // 头像
-	welcometitle: "Hi, I'm TangShiMei", // 标题
+	welcometitle: "Hi, I'm Tang", // 标题
 
 	// 颜色配置
 	color: {
