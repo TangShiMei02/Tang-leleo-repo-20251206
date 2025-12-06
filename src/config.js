@@ -30,16 +30,16 @@ const config = {
 			"type": "pic",   //"pic":静态壁纸;"video":动态壁纸
 			"datainfo": {
 				"title": "海洋女孩",
-				"preview": "/img/wallpaper/static/海洋女孩/image-pre.webp",
-				"url": "/img/wallpaper/static/海洋女孩/image.png",     //当然，也可填写网络地址或壁纸api，如随机PC壁纸api："url":"https://t.mwm.moe/pc"
+				"preview": "/img/wallpaper/static/夏末叶栖：银发少女的侧影.jpg",
+				"url": "/img/wallpaper/static/夏末叶栖：银发少女的侧影.jpg",     //当然，也可填写网络地址或壁纸api，如随机PC壁纸api："url":"https://t.mwm.moe/pc"
 			},
 		},
 		"mobile": {   //移动端
 			"type": "pic",
 			"datainfo": {
 				"title": "0001",
-				"preview": "/img/wallpaper/static-mobile/0001/image-pre.webp",
-				"url": "/img/wallpaper/static-mobile/0001/image.png"  //同理，随机移动端壁纸："url":"https://t.mwm.moe/mp"
+				"preview": "/img/wallpaper/static-mobile/0001/IMG_12798.webp",
+				"url": "/img/wallpaper/static-mobile/0001/IMG_12798.webp"  //同理，随机移动端壁纸："url":"https://t.mwm.moe/mp"
 			}
 		}
 
@@ -47,8 +47,8 @@ const config = {
 
 	//极坐标图数据
 	polarChart: {
-		skills: ['Vue.js', 'React', 'JavaScript', 'Node', 'Java', 'Python', 'linux', 'Docker', 'MySQL', 'MongoDB', 'AWS'],
-		skillPoints: [85, 78, 88, 90, 80, 78, 85, 65, 82, 78, 70],
+		skills: ['外向性', '责任心', '开放性', '情绪稳定', '团队协作', '时间管理', '自学能力', '内向'],
+		skillPoints: [50, 90, 60, 78, 80, 87, 85, 65, 82, 80, 99],
 	},
 
 	//社交按钮
@@ -67,7 +67,11 @@ const config = {
 		"如果你看到了这行字，说明我已经成功吸引到了你的注意力。",
 		"顶峰的少年，给了你所有细节，你却说我不是迪迦，给不了你想要的光。",
 		"心简单，世界就简单，幸福才会生长；心自由，生活就自由，到哪都有快乐。",
-		"生命太短，没有时间留给遗憾，若不是终点，请微笑一直向前。"
+		"生命太短，没有时间留给遗憾，若不是终点，请微笑一直向前。",
+		"撒谎是人的本性，在大多数时间里我们甚至都不能对自己诚实。——《罗生门》",
+		"城南小陌又逢春，只见梅花不见人。离别总是难免，我们终要和握不住的东西说再见。",
+		"原来这世上真的存在来不及，来不及好好说话，来不及好好道别，当我终于开始痛哭的时候，一切都回不去了。",
+		"也许世界上有5000多与你一模一样的花，但只有你是我独一无二的玫瑰。如果你下午四点来，那从下午三点钟起，我就开始感到幸福。"
 	],
 
 	//音乐播放配置，采用MetingJS Api(https://github.com/metowolf/MetingJS)
