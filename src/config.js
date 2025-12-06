@@ -7,8 +7,8 @@ const config = {
 		icon: '/favicon.ico'   //网页图标，支持外链
 	},
 
-	avatar: "/img/avatar.jpg", // 头像
-	welcometitle: "Hi, I'm Leleo", // 标题
+	avatar: "/img/avatar02.jpg", // 头像
+	welcometitle: "Hi, I'm TangShiMei", // 标题
 
 	// 颜色配置
 	color: {
@@ -53,10 +53,11 @@ const config = {
 
 	//社交按钮
 	socialPlatformIcons: [
-		{ icon: "mdi-github", link: "https://www.github.com/leleo886" },
-		{ icon: "mdi-email", link: "mailto:leleo886@foxmail.com" },
+		{ icon: "mdi-github", link: "https://www.github.com/TangShiMei02" },
+		{ icon: "mdi-email", link: "mailto:yangqinhao1101@163.com" },
 		{ icon: "mdi-qqchat", link: "https://im.qq.com/" },
 		{ icon: "mdi-wechat", link: "https://wx.qq.com/" },
+		{ icon: "mdi-television-play", link: "https://space.bilibili.com/675768777" },
 		{ icon: "mdi-youtube", link: "https://www.youtube.com" },
 		{ icon: "mdi-facebook", link: "https://www.facebook.com" }
 	],
