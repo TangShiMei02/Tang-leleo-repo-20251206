@@ -55,11 +55,11 @@ const config = {
 	socialPlatformIcons: [
 		{ icon: "mdi-github", link: "https://www.github.com/TangShiMei02" },
 		{ icon: "mdi-email", link: "mailto:yangqinhao1101@163.com" },
-		{ icon: "mdi-qqchat", link: "https://im.qq.com/" },
+		{ icon: "mdi-qqchat", link: "https://res.abeim.cn/api/qq/?qq=2244182951" },
 		{ icon: "mdi-wechat", link: "https://wx.qq.com/" },
 		{ icon: "mdi-television-play", link: "https://space.bilibili.com/675768777" },
 		{ icon: "mdi-youtube", link: "https://www.youtube.com" },
-		{ icon: "mdi-facebook", link: "https://www.facebook.com" }
+		{ icon: "mdi-send-variant", link: "https://space.bilibili.com/675768777" }
 	],
 
 	//打字机
@@ -150,10 +150,9 @@ const config = {
 		{ go: "📝 前往", img: "/img/project-img/1755067466457.jpg", title: "Project 3", subtitle: "3,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://leleo.top", show: false },
 		{ go: "👍 前往", img: "/img/project-img/1755073272839.jpg", title: "Project 4", subtitle: "4,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://leleo.top", show: false },
 		{ go: "🗃 前往", img: "/img/project-img/1755074935144.webp", title: "Project 5", subtitle: "5,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://leleo.top", show: false },
-		{ go: "🎨 前往", img: "/img/project-img/IMG_4532.webp", title: "Project 6", subtitle: "6,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://leleo.top", show: false },
-		{ go: "💍 前往", img: "/img/sunshine.jpg", title: "Project 7", subtitle: "7,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://leleo.top", show: false },
 		{ go: "🚀 前往", img: "/img/蓝发垂落时，星空照城市.png", title: "留言板", subtitle: "欢迎留言啊！", text: "想说啥就说，别不说，中不中？真diss！！", url: "/deployed-projects/leave-a-message.html", show: false },
-		
+		{ go: "🎨 前往", img: "/img/project-img/IMG_4532.webp", title: "Project 6", subtitle: "6,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://leleo.top", show: false },
+		{ go: "💍 前往", img: "/img/sunshine.jpg", title: "Project 7", subtitle: "7,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://leleo.top", show: false },	
 	],
 
 	statement: ["备案号：XXICP备123456789号", "Copyright © 2025 TangShiMei"],

@@ -1,0 +1,165 @@
+
+
+Folder PATH listing for volume Windows-SSD
+Volume serial number is 5CED-A5FD
+C:.
+│   .gitignore
+│   index.html
+│   LICENSE
+│   package-lock.json
+│   package.json
+│   project_structure.txt
+│   README.md
+│   vite.config.js
+│   wrangler.jsonc
+│   一键推送Pro09.bat
+│   一键生成项目结构.bat
+│   
+├───.vscode
+│       extensions.json
+│       
+├───img
+│   │   config.md
+│   │   domainToVercel.md
+│   │   env.md
+│   │   
+│   ├───domainToVercel
+│   │       173-q.png
+│   │       173-r.png
+│   │       173-s.png
+│   │       1737605425810.png
+│   │       1737605814820.png
+│   │       1737605840227.png
+│   │       
+│   └───leleo-home-page
+│           1737532219807.png
+│           1737532290584.png
+│           1737532316302.png
+│           1737533474493.png
+│           1737538980894.png
+│           1737539171658.png
+│           1737624788108.png
+│           1737625015472.png
+│           1737626184576.png
+│           1737626397809.png
+│           1737785497852.png
+│           IMG_20250813_122124.jpg
+│           IMG_20250813_122156.jpg
+│           IMG_20250813_122251.jpg
+│           IMG_20250813_125718.jpg
+│           IMG_20250813_131021.jpg
+│           
+├───public
+│   ├───css
+│   │       app.less
+│   │       mobile.less
+│   │       style.css
+│   │       
+│   ├───deployed-projects
+│   │       leave-a-message.html
+│   │       
+│   ├───fonts
+│   │       Digital-Play-Italic-St-1.ttf
+│   │       faken.ttf
+│   │       
+│   └───img
+│       │   avatar.jpg
+│       │   avatar02.jpg
+│       │   bilibili.png
+│       │   favicon.ico
+│       │   loader.svg
+│       │   sunshine.jpg
+│       │   蓝发垂落时，星空照城市.png
+│       │   
+│       ├───project-img
+│       │       1754876989101.jpeg
+│       │       1755067466457.jpg
+│       │       1755073272839.jpg
+│       │       1755074935144.webp
+│       │       IMG_4532.webp
+│       │       
+│       ├───stackicon
+│       │       chartjs.png
+│       │       mdi.svg
+│       │       meting.png
+│       │       uiverse.png
+│       │       vite.svg
+│       │       
+│       └───wallpaper
+│           ├───dynamic
+│           │   ├───向往航天的女孩
+│           │   │       Toy-Aeroplane-pre.webm
+│           │   │       Toy-Aeroplane.webm
+│           │   │       
+│           │   └───尼尔：机械纪元 团队
+│           │           Nier-Automata-Team-pre.webm
+│           │           Nier-Automata-Team.webm
+│           │           
+│           ├───dynamic-mobile
+│           │   ├───chuva
+│           │   │       chuva-pre.mp4
+│           │   │       chuva.mp4
+│           │   │       
+│           │   ├───Doodle-小猫女仆降临
+│           │   │       d12-pre.mp4
+│           │   │       d12.mp4
+│           │   │       
+│           │   └───幻觉镇-gaako_illust
+│           │           Hallucination_town-pre.mp4
+│           │           Hallucination_town.mp4
+│           │           
+│           ├───static
+│           │   │   夏末叶栖：银发少女的侧影.jpg
+│           │   │   
+│           │   ├───书房夜晚
+│           │   │       image-pre.webp
+│           │   │       image.png
+│           │   │       
+│           │   ├───安逸舒适
+│           │   │       image-.png
+│           │   │       image-pre.webp
+│           │   │       
+│           │   └───海洋女孩
+│           │           image-pre.webp
+│           │           image.png
+│           │           
+│           └───static-mobile
+│               ├───0001
+│               │       image-pre.webp
+│               │       image.png
+│               │       IMG_12798.webp
+│               │       
+│               ├───0002
+│               │       image-pre.webp
+│               │       image.png
+│               │       
+│               ├───0003
+│               │       image-pre.webp
+│               │       image.png
+│               │       
+│               └───0004
+│                       image-pre.webp
+│                       image.png
+│                       
+└───src
+    │   app.js
+    │   App.vue
+    │   config.js
+    │   main.js
+    │   
+    ├───components
+    │   │   hoemright.vue
+    │   │   loader.vue
+    │   │   polarchart.vue
+    │   │   turntable.vue
+    │   │   typewriter.vue
+    │   │   
+    │   └───tabs
+    │           tab1.vue
+    │           tab2.vue
+    │           tab3.vue
+    │           
+    └───utils
+            common.js
+            cookieUtils.js
+            
