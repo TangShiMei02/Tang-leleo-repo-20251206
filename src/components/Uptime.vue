@@ -1,6 +1,6 @@
 <template>
   <div class="uptime">
-    本站已稳定运行 <span>{{ days }}</span> 天 <span>{{ hours }}</span> 时 <span>{{ mins }}</span> 分 <span>{{ secs }}</span> 秒
+     <span>{{ days }}</span> 天 <span>{{ hours }}</span> 时 <span>{{ mins }}</span> 分 <span>{{ secs }}</span> 秒
   </div>
 </template>
 
