@@ -9,10 +9,11 @@ import config from './config.js';
 import { getCookie } from './utils/cookieUtils.js';
 import { setMeta,getFormattedTime,getFormattedDate,dataConsole } from './utils/common.js';
 import { useDisplay } from 'vuetify'
+import Uptime from './components/Uptime.vue';
 
 export default {
   components: {
-    tab1,tab2,tab3,loader,homeright,typewriter,polarchart
+    tab1,tab2,tab3,loader,homeright,typewriter,polarchart,Uptime
   },
   setup() {
     const { xs,sm,md } = useDisplay();

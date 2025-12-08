@@ -244,6 +244,19 @@
               </div>
             </v-card>
 
+
+            <!-- 运行时长 -->
+            <v-card class="ma-3 pa-2" hover variant="tonal" max-width="400" rounded="lg" style="text-align: center;">
+              <template v-slot:subtitle>
+                <span class="leleo-card-subtitle">本站已稳定运行</span>
+              </template>
+              <v-card-text>
+                <uptime />
+              </v-card-text>
+            </v-card>
+
+            
+
             <p class="ma-6">
                 <span v-for="item in configdata.statement">
                   {{ item }}<br>

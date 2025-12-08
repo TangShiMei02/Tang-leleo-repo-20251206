@@ -7,6 +7,8 @@
     "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
+    "clean": "rd /s /q dist 2>nul || exit 0",
+    "rebuild": "npm run clean && npm run build",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",

@@ -3,11 +3,15 @@ import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   plugins: [vue()],
+  define: {
+    // 注入构建时间，作为本地开发时的 fallback
+    __BUILD_TIME__: JSON.stringify(new Date().toISOString())
+  },
   build: {
-    assetsInlineLimit: 0,          // 禁止内联任何资源
-    chunkSizeWarningLimit: 2000,   // 把警告阈值调到 2 MB，避免误报
+    assetsInlineLimit: 0,
+    chunkSizeWarningLimit: 2000,
     rollupOptions: {
-      external: [                  // 让 rollup 完全不理这些大文件
+      external: [
         /wallpaper\/dynamic/,
         /wallpaper\/static/
       ]
