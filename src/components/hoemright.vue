@@ -159,9 +159,11 @@ export default {
           }
         }
       },
+
+	  
 	  performSearch() {
 		const query = this.searchQuery.trim();
-		if (!query) return;
+		if (!query) return; // 空输入直接返回，不执行任何操作
 
 		if (this.isUrl) {
 			let url = query;
@@ -172,16 +174,28 @@ export default {
 			
 			window.open(url, '_blank');
 		} else {
+		  // 检查是否选择了 Yandex
+		  if (this.selectedEngine.value === 'yandex') {
+			 // 跳转到彩蛋页面（无论 query 是什么，只要非空）
+			window.open('/some-html-pages/yandex-easter-egg.html', '_blank');
+			return;
+		  }
 			const engineUrls = {
 				google: `https://www.google.com/search?q=${encodeURIComponent(query)}`,
 				bing: `https://www.bing.com/search?q=${encodeURIComponent(query)}`,
 				baidu: `https://www.baidu.com/s?wd=${encodeURIComponent(query)}`,
-				yandex: `https://yandex.com/search/?text=${encodeURIComponent(query)}`,
+				
 				duckduckgo: `https://duckduckgo.com/?q=${encodeURIComponent(query)}`
 			};
-			window.open(engineUrls[this.selectedEngine.value], '_blank');
+
+			const url = engineUrls[this.selectedEngine.value];
+			if (url) {
+			  window.open(url, '_blank');
+			}		
 		}
 	  },
+
+
 	  isLikelyUrl(input) {
 		// 移除首尾空格
 		const str = input.trim();

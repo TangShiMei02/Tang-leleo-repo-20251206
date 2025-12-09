@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yandex 被取缔啦！</title>
+
+  <!-- 引入你主页的字体 -->
+  <style>
+    @font-face {
+      font-family: "myfont";
+      src: url("/fonts/faken.ttf") format("truetype");
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "digitalfont";
+      src: url("/fonts/Digital-Play-Italic-St-1.ttf") format("truetype");
+      font-display: swap;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #282c34; /* 和你主页一致 */
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      font-family: "myfont", sans-serif;
+    }
+
+    .easter-egg-container {
+      text-align: center;
+      padding: 2rem;
+      max-width: 90%;
+      animation: fadeIn 1s ease forwards, float 3s ease-in-out infinite;
+      opacity: 0;
+    }
+
+    .easter-egg-title {
+      font-family: "digitalfont", monospace;
+      font-size: clamp(1.5rem, 5vw, 3rem);
+      color: #00f3ff; /* 青蓝色，类似终端光 */
+      text-shadow:
+        0 0 8px #00f3ff,
+        0 0 16px #00a2ff,
+        0 0 24px rgba(0, 162, 255, 0.5);
+      line-height: 1.4;
+      letter-spacing: 2px;
+      animation: glitch 2s infinite alternate-reverse;
+    }
+
+    /* 入场淡入 */
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    /* 轻微浮动 */
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* 故障闪烁效果（轻微） */
+    @keyframes glitch {
+      0% { text-shadow: 0 0 8px #00f3ff, 0 0 16px #00a2ff; }
+      2% { text-shadow: 2px 0 8px #ff00c8, -2px -2px 8px #00f3ff; }
+      4% { text-shadow: -2px 0 8px #00f3ff, 2px 2px 8px #00a2ff; }
+      100% { text-shadow: 0 0 8px #00f3ff, 0 0 16px #00a2ff; }
+    }
+
+    /* 手机适配 */
+    @media (max-width: 600px) {
+      .easter-egg-title {
+        font-size: clamp(1.2rem, 6vw, 2rem);
+        padding: 0 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="easter-egg-container">
+    <div class="easter-egg-title">
+      哈哈哈，想不到吧，zhu！<br/>
+      我已经将这里取缔了！！
+    </div>
+  </div>
+</body>
+</html>
