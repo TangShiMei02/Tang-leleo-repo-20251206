@@ -248,7 +248,7 @@
             <!-- 运行时长 -->
             <v-card class="ma-3 pa-2" hover variant="tonal" max-width="400" rounded="lg" style="text-align: center;">
               <template v-slot:subtitle>
-                <span class="leleo-card-subtitle">本站已稳定运行</span>
+                <span class="leleo-card-subtitle">本站居然运行了↓</span>
               </template>
               <v-card-text>
                 <uptime />
