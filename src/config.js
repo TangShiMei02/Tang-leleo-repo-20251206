@@ -147,9 +147,9 @@ const config = {
 
 	//项目卡片 其中 字段"show"控制初始卡片的text是否展开
 	projectcards: [
-		{ go: "🔍 前往", img: "/img/蓝发垂落时，星空照城市.png", title: "博客", subtitle: "我的博客页面还在跟kimi，千问老师切磋，啥时候能搞出来是个问题。。。", text: "所以你点不开啊，薛定谔的博客，哈哈哈，早日让kimi老师弄出来这个项目！", url: " https://tang-blog.leleosd.top/  ", show: false },
+		{ go: "🔍 前往", img: "/img/蓝发垂落时，星空照城市.png", title: "博客", subtitle: "这里是我的小空间，欢迎点进来支持一下啊", text: "2025年12月26日晚上22点18分写", url: " https://tang-blog.leleosd.top/  ", show: false },
 		{ go: "🚀 前往", img: "/img/project-img/IMG_4532.webp", title: "留言板", subtitle: "欢迎留言啊！", text: "想说啥就说，别不说，中不中？真diss！！", url: "https://tang-blog.leleosd.top/comments/", show: false },     //  👉  /deployed-projects/leave-a-message.html  👈 这个是本地的一个留言页面，回来前面那个url不能用了就先用这个
-		{ go: "🗂️ 前往", img: "/img/project-img/1754876989101.jpeg", title: "我的旧秘密基地", subtitle: "点击下面这个前往我那个不成熟，稚嫩的秘密基地", text: "这里也是什么都没有哦。2025/12/09 22：54", url: "https://tangshimei.leleosd.top/", show: false },
+		{ go: "🗂️ 前往", img: "/img/project-img/1754876989101.jpeg", title: "我的旧秘密基地", subtitle: "点击下面这个前往我那个不成熟，稚嫩的秘密基地", text: "点错啦，是左边那个 🗂️前往 按钮哦！！", url: "https://tangshimei.leleosd.top/", show: false },
 		{ go: "📝 前往", img: "/img/project-img/1755067466457.jpg", title: "Project 3", subtitle: "3,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://leleo.top", show: false },
 		{ go: "👍 前往", img: "/img/project-img/1755073272839.jpg", title: "Project 4", subtitle: "4,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://leleo.top", show: false },
 		{ go: "🗃 前往", img: "/img/project-img/1755074935144.webp", title: "Project 5", subtitle: "5,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://leleo.top", show: false },
