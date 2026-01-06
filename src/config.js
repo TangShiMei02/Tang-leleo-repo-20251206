@@ -10,6 +10,10 @@ const config = {
 	avatar: "/img/avatar02.jpg", // 头像
 	welcometitle: "Hi, I'm TangShiMei", // 标题
 
+    // 👇 新增：网站实际上线时间（ISO 8601 格式）
+    launchTime: "2025-12-07T00:00:00", // ← 请根据实际情况修改此时间！
+
+
 	// 颜色配置
 	color: {
 		themecolor: "#FFFFFF", // 主题颜色，推荐趋于亮白可带有轻微色调，例： #D1FFEC
