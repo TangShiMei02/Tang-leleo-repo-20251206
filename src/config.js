@@ -152,14 +152,14 @@ const config = {
 
 	//项目卡片 其中 字段"show"控制初始卡片的text是否展开
 	projectcards: [
-		{ go: "🔍 前往", img: "/img/蓝发垂落时，星空照城市.png", title: "博客", subtitle: "这里是我的小空间，欢迎点进来支持一下啊", text: "2025年12月26日晚上22点18分写", url: " https://tsmblog.lilys.top/  ", show: false },
-		{ go: "🚀 前往", img: "/img/project-img/IMG_4532.webp", title: "留言板", subtitle: "欢迎留言啊！", text: "想说啥就说，别不说，中不中？真diss！！", url: "https://tsmblog.lilys.top/comments/", show: false },     //  👉  /deployed-projects/leave-a-message.html  👈 这个是本地的一个留言页面，回来前面那个url不能用了就先用这个
+		{ go: "🔍 前往", img: "/img/蓝发垂落时，星空照城市.png", title: "博客", subtitle: "这里是我的小空间，欢迎点进来支持一下啊", text: "2025年12月26日晚上22点18分写", url: " https://tang-blog.leleosd.top/  ", show: false },
+		{ go: "🚀 前往", img: "/img/project-img/IMG_4532.webp", title: "留言板", subtitle: "欢迎留言啊！", text: "想说啥就说，别不说，中不中？真diss！！", url: "https://tang-blog.leleosd.top/comments/", show: false },     //  👉  /deployed-projects/leave-a-message.html  👈 这个是本地的一个留言页面，回来前面那个url不能用了就先用这个
 		{ go: "📝 前往", img: "/img/project-img/1755067466457.jpg", title: "本站数据报", subtitle: "用的是51.la统计，还是太好用啦，哈哈哈！", text: "不要再点错啦！点前往哦", url: "https://v6.51.la/s/4e15gMExaC7sDLm", show: false },
 		{ go: "🗂️ 前往", img: "/img/project-img/1754876989101.jpeg", title: "我的旧秘密基地", subtitle: "点击下面这个前往我那个不成熟，稚嫩的秘密基地", text: "点错啦，是左边那个 🗂️前往 按钮哦！！", url: "https://tangshimei.leleosd.top/", show: false },
 		{ go: "👍 前往", img: "https://pic.tsmei.lilys.top/file/1767773277135_image.png", title: "一个自建的图床", subtitle: "cloudflare＋纸飞机实现的", text: "点击那个前往按钮啦，可以尝试一下哦！！20260107 1613", url: "https://pic.tsmei.lilys.top/", show: false },
-		{ go: "🗃 前往", img: "/img/project-img/1755074935144.webp", title: "Project 5", subtitle: "5,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://tsmei.lilys.top/", show: false },
-		{ go: "🎨 前往", img: "/img/sunshine.jpg", title: "Project 6", subtitle: "6,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://tsmei.lilys.top/", show: false },
-		{ go: "💍 前往", img: "/img/sunshine.jpg", title: "Project 7", subtitle: "7,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://tsmei.lilys.top/", show: false },	
+		{ go: "🗃 前往", img: "/img/project-img/1755074935144.webp", title: "Project 5", subtitle: "5,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://tang-blog.leleosd.top/", show: false },
+		{ go: "🎨 前往", img: "/img/sunshine.jpg", title: "Project 6", subtitle: "6,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://tang-blog.leleosd.top/", show: false },
+		{ go: "💍 前往", img: "/img/sunshine.jpg", title: "Project 7", subtitle: "7,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://tang-blog.leleosd.top/", show: false },	
 	],
 
 	statement: ["Copyright © 2025 TangShiMei"],
