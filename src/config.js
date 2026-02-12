@@ -158,7 +158,7 @@ const config = {
 		{ go: "🗂️ 前往", img: "https://cdn.magicalapk.com/square/1795785466589260.jpg", title: "我的旧秘密基地", subtitle: "点击下面这个前往我那个不成熟，稚嫩的秘密基地", text: "点错啦，是左边那个 🗂️前往 按钮哦！！", url: "https://tangshimei.leleosd.top/", show: false },
 		{ go: "👍 前往", img: "https://cdn.magicalapk.com/square/1fd81d57-4911-43c3-8c97-fe91c808afc4.jpg", title: "一个自建的图床", subtitle: "cloudflare＋纸飞机实现的", text: "点击那个前往按钮啦，可以尝试一下哦！！20260107 1613", url: "https://pic-tsmei.leleosd.top/", show: false },
 		{ go: "🗃 前往", img: "https://cdn.magicalapk.com/square/e1d45969-565a-4dcb-ac98-8ed524ec4044.jpg", title: "友链朋友圈示例页面", subtitle: "没有副标题，2026/2/12 11点32写的", text: "懒懒🐖，写不了一点", url: "https://fc.lilys.top/", show: false },
-		{ go: "🎨 前往", img: "https://cdn.magicalapk.com/square/1814706510054513.jpg", title: "自建临时邮件有项目但是不太成功", subtitle: "短巷与雨那里学的", text: "https://docs.moemail.app/start.html这个是官方文档。失败的主要原因是因为我没有顶级域名，我的那个lilys.top域名托管不到cloudflare上面，就不行了。。202602130029", url: "https://mail.tsmei.lilys.top/", show: false },
+		{ go: "🎨 前往", img: "https://cdn.magicalapk.com/square/1814706510054513.jpg", title: "自建临时邮件有项目但是不太成功", subtitle: "短巷与雨那里学的", text: "https://docs.moemail.app/start.html这个是官方文档。失败的主要原因是因为我没有顶级域名，我的那个lilys.top域名托管不到cloudflare上面，就不行了。。202602130029", url: "https://tsmail.cc.cd/", show: false },
 		{ go: "💍 前往", img: "/img/sunshine.jpg", title: "Project 7", subtitle: "7,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://tsmei.leleosd.top/", show: false },	
 	],
 
