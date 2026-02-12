@@ -157,7 +157,7 @@ const config = {
 		{ go: "📝 前往", img: "/img/project-img/1755067466457.jpg", title: "本站数据报", subtitle: "用的是51.la统计，还是太好用啦，哈哈哈！", text: "不要再点错啦！点前往哦", url: "https://v6.51.la/s/4e15gMExaC7sDLm", show: false },
 		{ go: "🗂️ 前往", img: "/img/project-img/1754876989101.jpeg", title: "我的旧秘密基地", subtitle: "点击下面这个前往我那个不成熟，稚嫩的秘密基地", text: "点错啦，是左边那个 🗂️前往 按钮哦！！", url: "https://tangshimei.leleosd.top/", show: false },
 		{ go: "👍 前往", img: "https://cdn.magicalapk.com/square/1fd81d57-4911-43c3-8c97-fe91c808afc4.jpg", title: "一个自建的图床", subtitle: "cloudflare＋纸飞机实现的", text: "点击那个前往按钮啦，可以尝试一下哦！！20260107 1613", url: "https://pic-tsmei.leleosd.top/", show: false },
-		{ go: "🗃 前往", img: "/img/project-img/1755074935144.webp", title: "Project 5", subtitle: "5,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://tsmei.leleosd.top/", show: false },
+		{ go: "🗃 前往", img: "https://cdn.magicalapk.com/square/e1d45969-565a-4dcb-ac98-8ed524ec4044.jpg", title: "友链朋友圈示例页面", subtitle: "没有副标题，2026/2/12 11点32写的", text: "懒懒🐖，写不了一点", url: "https://fc.lilys.top/", show: false },
 		{ go: "🎨 前往", img: "/img/sunshine.jpg", title: "Project 6", subtitle: "6,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://tsmei.leleosd.top/", show: false },
 		{ go: "💍 前往", img: "/img/sunshine.jpg", title: "Project 7", subtitle: "7,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://tsmei.leleosd.top/", show: false },	
 	],
