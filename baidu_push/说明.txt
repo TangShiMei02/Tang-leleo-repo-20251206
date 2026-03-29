@@ -7,3 +7,12 @@ https://pic-tsmei.leleosd.top/file/default_download_folder/C4gjZQ41.png
 api提交
 
 curl命令提交，虽然现在我也不是很懂。。2026/1/10  21：03
+
+
+
+
+命令是这个
+
+curl -H 'Content-Type:text/plain' --data-binary @urls.txt "http://data.zz.baidu.com/urls?site=https://www.224418.xyz&token=IbP2TXplqmvc7hq8"
+
+--2026/3/29 18:46
