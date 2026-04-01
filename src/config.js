@@ -34,8 +34,8 @@ const config = {
 			"type": "pic",   //"pic":静态壁纸;"video":动态壁纸
 			"datainfo": {
 				"title": "海洋女孩",
-				"preview": "/img/wallpaper/static/夏末叶栖：银发少女的侧影.jpg",
-				"url": "/img/wallpaper/static/夏末叶栖：银发少女的侧影.jpg",     //当然，也可填写网络地址或壁纸api，如随机PC壁纸api："url":"https://t.mwm.moe/pc"
+				"preview": "/img/wallpaper/static/pc_default_wallpaper.webp",
+				"url": "/img/wallpaper/static/pc_default_wallpaper.webp",     //当然，也可填写网络地址或壁纸api，如随机PC壁纸api："url":"https://t.mwm.moe/pc"
 			},
 		},
 		"mobile": {   //移动端
@@ -152,7 +152,7 @@ const config = {
 
 	//项目卡片 其中 字段"show"控制初始卡片的text是否展开
 	projectcards: [
-		{ go: "🔍 前往", img: "https://cdn.magicalapk.com/square/916c1108-f6c9-45b3-aae7-e8c38c26f981.jpg", title: "博客", subtitle: "这里是我的小空间，欢迎点进来支持一下啊", text: "2025年12月26日晚上22点18分写", url: " https://blog.224418.xyz/  ", show: false },
+		{ go: "🔍 前往", img: "https://cdn.magicalapk.com/square/3185866214923561.jpg", title: "博客", subtitle: "这里是我的小空间，欢迎点进来支持一下啊", text: "2025年12月26日晚上22点18分写", url: " https://blog.224418.xyz/  ", show: false },
 		{ go: "🚀 前往", img: "/img/project-img/IMG_4532.webp", title: "留言板", subtitle: "欢迎留言啊！", text: "想说啥就说，别不说，中不中？真diss！！", url: "https://blog.224418.xyz/comments/", show: false },     //  👉  /deployed-projects/leave-a-message.html  👈 这个是本地的一个留言页面，回来前面那个url不能用了就先用这个
 		{ go: "📝 前往", img: "https://cdn.magicalapk.com/square/1777977139108424.jpg", title: "本站数据报", subtitle: "用的是51.la统计，还是太好用啦，哈哈哈！", text: "不要再点错啦！点前往哦", url: "https://v6.51.la/s/4e15gMExaC7sDLm", show: false },
 		{ go: "🗂️ 前往", img: "https://cdn.magicalapk.com/square/1795785466589260.jpg", title: "我的旧秘密基地", subtitle: "点击下面这个前往我那个不成熟，稚嫩的秘密基地", text: "点错啦，是左边那个 🗂️前往 按钮哦！！", url: "https://preblog.224418.xyz/", show: false },
