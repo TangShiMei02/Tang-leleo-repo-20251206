@@ -1,7 +1,7 @@
 const config = {
 	//网页元数据
 	metaData: {
-		title: 'TangShiMei的个人主页🎉',
+		title: 'TangShiMei的个人主页',
 		description: '欢迎来到TangShiMei的秘密基地！',
 		keywords: 'TangShiMei,TangShiMei,个人主页,个人网站',
 		icon: '/img/favicon.ico'   //网页图标，支持外链
