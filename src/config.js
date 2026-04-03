@@ -162,7 +162,7 @@ const config = {
 		{ go: "💍 前往", img: "/img/sunshine.jpg", title: "Project 7", subtitle: "7,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://www.224418.xyz/", show: false },	
 	],
 
-	statement: ["Copyright © 2025 TangShiMei"],
+	statement: ["Copyright © 2025-2026 TangShiMei"],
 }
 
 export default config
