@@ -1,8 +1,8 @@
 const config = {
 	//网页元数据
 	metaData: {
-		title: 'TangShiMei的个人主页',
-		description: '我叫TangShiMei,很高兴认识你们。25级交通工程(机场方向)大学生一枚。很喜欢的一句话是：“摘下最喜欢的麦穗，然后闭着眼走过整片麦田。”',
+		title: '傥师妹TangShiMei的个人主页',
+		description: '我叫TangShiMei(傥师妹),很高兴认识你们。一枚25级交通工程(机场方向)大学生。很喜欢的一句话是：“摘下最喜欢的麦穗，然后闭着眼走过整片麦田。”',
 		keywords: 'TangShiMei,TangShiMei,个人主页,个人网站',
 		icon: '/img/favicon.ico'   //网页图标，支持外链
 	},
