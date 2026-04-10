@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tsmei.leleosd.top/sitemap.xml
+Sitemap: https://www.224418.xyz/sitemap.xml
