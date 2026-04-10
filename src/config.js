@@ -152,14 +152,14 @@ const config = {
 
 	//项目卡片 其中 字段"show"控制初始卡片的text是否展开
 	projectcards: [
-		{ go: "🔍 前往", img: "https://cdn.magicalapk.com/square/3185866214923561.jpg", title: "博客", subtitle: "这里是我的小空间，欢迎点进来支持一下啊", text: "2025年12月26日晚上22点18分写", url: " https://blog.224418.xyz/  ", show: false },
+		{ go: "🔍 前往", img: "https://cdn.magicalapk.com/square/3185866214923561.jpg", title: "博客", subtitle: "这里是 傥师妹TangShiMei的小空间 ，欢迎点进来支持一下啊", text: "摘下最喜欢的麦穗，然后闭着眼走过整片麦田。", url: " https://blog.224418.xyz/  ", show: false },
 		{ go: "🚀 前往", img: "/img/project-img/IMG_4532.webp", title: "留言板", subtitle: "欢迎留言啊！", text: "想说啥就说，别不说，中不中？真diss！！", url: "https://blog.224418.xyz/comments/", show: false },     //  👉  /deployed-projects/leave-a-message.html  👈 这个是本地的一个留言页面，回来前面那个url不能用了就先用这个
 		{ go: "📝 前往", img: "https://cdn.magicalapk.com/square/1777977139108424.jpg", title: "本站数据报", subtitle: "用的是51.la统计，还是太好用啦，哈哈哈！", text: "不要再点错啦！点前往哦", url: "https://v6.51.la/s/4e15gMExaC7sDLm", show: false },
 		{ go: "🗂️ 前往", img: "https://cdn.magicalapk.com/square/1795785466589260.jpg", title: "我的旧秘密基地", subtitle: "点击下面这个前往我那个不成熟，稚嫩的秘密基地", text: "点错啦，是左边那个 🗂️前往 按钮哦！！", url: "https://preblog.224418.xyz/", show: false },
-		{ go: "👍 前往", img: "https://cdn.magicalapk.com/square/1fd81d57-4911-43c3-8c97-fe91c808afc4.jpg", title: "一个自建的图床", subtitle: "cloudflare＋纸飞机实现的", text: "点击那个前往按钮啦，可以尝试一下哦！！20260107 1613 备用地址：https://pic.tsmei.lilys.top/", url: "https://pic.224418.xyz/", show: false },
-		{ go: "🗃 前往", img: "https://cdn.magicalapk.com/square/e1d45969-565a-4dcb-ac98-8ed524ec4044.jpg", title: "友链朋友圈示例页面", subtitle: "没有副标题，2026/2/12 11点32写的", text: "懒懒🐖，写不了一点.备用地址：https://fc.lilys.top/", url: "https://fc.224418.xyz/", show: false },
+		{ go: "👍 前往", img: "https://cdn.magicalapk.com/square/1fd81d57-4911-43c3-8c97-fe91c808afc4.jpg", title: "一个自建的图床", subtitle: "cloudflare＋纸飞机实现的", text: "点击那个前往按钮啦，可以尝试一下哦！！20260107 1613", url: "https://pic.224418.xyz/", show: false },
+		{ go: "🗃 前往", img: "https://cdn.magicalapk.com/square/e1d45969-565a-4dcb-ac98-8ed524ec4044.jpg", title: "友链朋友圈示例页面", subtitle: "没有副标题，2026/2/12 11点32写的", text: "懒懒🐖，写不了一点", url: "https://fc.224418.xyz/", show: false },
 		{ go: "🎨 前往", img: "https://cdn.magicalapk.com/square/1814706510054513.jpg", title: "自建临时邮件有项目但是不太成功", subtitle: "短巷与雨那里学的", text: "https://docs.moemail.app/start.html这个是官方文档。失败的主要原因是因为我没有顶级域名，我的那个lilys.top域名托管不到cloudflare上面，就不行了。。202602130029。备用地址：https://mail.224418.xyz/", url: "https://tsmail.cc.cd/", show: false },
-		{ go: "💍 前往", img: "/img/sunshine.jpg", title: "Project 7", subtitle: "7,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://www.224418.xyz/", show: false },	
+		{ go: "💍 前往", img: "/img/sunshine.jpg", title: "Project 7", subtitle: "也是没有副标题", text: "这个项目七目前来讲还是不知道做什么，就在这里放着吧，图个好看！-2026/4/10 19:00", url: "https://www.224418.xyz/", show: true },	
 	],
 
 	statement: ["Copyright © 2025-2026 TangShiMei"],
