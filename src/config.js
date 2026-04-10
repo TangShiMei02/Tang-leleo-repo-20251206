@@ -2,7 +2,7 @@ const config = {
 	//网页元数据
 	metaData: {
 		title: '傥师妹TangShiMei的个人主页',
-		description: '我叫TangShiMei(傥师妹),很高兴认识你们。一枚25级交通工程(机场方向)大学生。很喜欢的一句话是：“摘下最喜欢的麦穗，然后闭着眼走过整片麦田。”',
+		description: '我叫TangShiMei(傥师妹),很高兴认识你们。一枚25级交通工程(机场方向)大学生。很喜欢的一句话是：“摘下最喜欢的麦穗，然后闭着眼走过整片麦田。”个人博客是 https://blog.224418.xyz/',
 		keywords: 'TangShiMei,TangShiMei,个人主页,个人网站',
 		icon: '/img/favicon.ico'   //网页图标，支持外链
 	},
@@ -26,7 +26,7 @@ const config = {
 	blur: 5, // 毛玻璃模糊效果
 
 	// 我的标签
-	tags: ['乐观开朗', '温柔体贴', '随和亲切', '冷静沉着', '才思敏捷', '风趣幽默', '刚正不阿', '善解人意'],
+	tags: ['男生', 'infj', '2025级大学生', 'CAUC航大人',  '风趣幽默', '刚正不阿', '善解人意'],
 
 	// 默认背景壁纸
 	background: {
@@ -58,12 +58,11 @@ const config = {
 	//社交按钮
 	socialPlatformIcons: [
 		{ icon: "mdi-github", link: "https://www.github.com/TangShiMei02" },
-		{ icon: "mdi-email", link: "mailto:yangqinhao1101@163.com" },
+		{ icon: "mdi-email", link: "mailto:me@224418.xyz" },
 		{ icon: "mdi-qqchat", link: "https://res.abeim.cn/api/qq/?qq=2244182951" },
 		{ icon: "mdi-wechat", link: "https://wx.qq.com/" },
 		{ icon: "mdi-television-play", link: "https://space.bilibili.com/675768777" },
-		{ icon: "mdi-youtube", link: "https://www.youtube.com" },
-		{ icon: "mdi-send-variant", link: "https://space.bilibili.com/675768777" }
+		{ icon: "mdi-youtube", link: "https://www.youtube.com" }
 	],
 
 	//打字机
