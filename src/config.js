@@ -158,7 +158,7 @@ const config = {
 		{ go: "🗃 前往", img: "https://cdn.magicalapk.com/square/e1d45969-565a-4dcb-ac98-8ed524ec4044.jpg", title: "友链朋友圈示例页面", subtitle: "没有副标题，2026/2/12 11点32写的", text: "懒懒🐖，写不了一点", url: "https://fc.224418.xyz/", show: false },
 		{ go: "🎨 前往", img: "https://cdn.magicalapk.com/square/1814706510054513.jpg", title: "自建临时邮件有项目但是不太成功", subtitle: "短巷与雨那里学的", text: "https://docs.moemail.app/start.html这个是官方文档。失败的主要原因是因为我没有顶级域名，我的那个lilys.top域名托管不到cloudflare上面，就不行了。。202602130029。备用地址：https://mail.224418.xyz/", url: "https://tsmail.cc.cd/", show: false },
 		{ go: "📝 前往", img: "https://cdn.magicalapk.com/square/4216147013152665.jpg", title: "本站数据报", subtitle: "用的是51.la统计，还是太好用啦，哈哈哈！", text: "不要再点错啦！点前往哦", url: "https://v6.51.la/s/4e15gMExaC7sDLm", show: false },
-		{ go: "💍 前往", img: "https://cdn.magicalapk.com/square/4215654891397632.jpg", title: "站点监控", subtitle: "网站的近一个月运行状态监控", text: "这里面可以看我的各个站点的运行状态，于20260413 19：10 集齐", url: "https://stats.uptimerobot.com/Ds2t1icxJ3", show: false },	
+		{ go: "💍 前往", img: "https://cdn.magicalapk.com/square/4215654891397632.jpg", title: "站点监控", subtitle: "网站的近一个月运行状态监控", text: "这里面可以看我的各个站点的运行状态，于20260413 19：10 集齐 ", url: "https://stats.uptimerobot.com/Ds2t1icxJ3", show: false },	
 	],
 
 	statement: ["Copyright © 2025-2026 TangShiMei"],
