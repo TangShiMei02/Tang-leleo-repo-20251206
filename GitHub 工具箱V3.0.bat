@@ -1,5 +1,5 @@
 @echo off
-:: GitHub 超级工具箱 - 修复URL解析版（必须ANSI编码）
+:: GitHub 超级工具箱 v3.0 - 新增本地回滚功能
 chcp 936 >nul
 title GitHub 工具箱 Pro
 color 0F
@@ -17,8 +17,8 @@ cls
 color 0F
 echo.
 echo ===========================================
-echo    GitHub 超级工具箱 v2.0
-echo    融合9个脚本功能，已修复所有已知bug
+echo    GitHub 超级工具箱 v3.0
+echo    融合10个脚本功能，已修复所有已知bug
 echo ===========================================
 echo.
 echo 1. 克隆仓库 + 智能配置环境
@@ -29,9 +29,10 @@ echo 5. 智能推送（支持双协议，自动排除node_modules）
 echo 6. 生成项目结构树形图
 echo 7. 一键执行 npm install + dev
 echo 8. 完整工作流（克隆-配置-推送-启动）
+echo 9. 【新增】本地回滚到远程版本（救急专用）
 echo 0. 退出程序
 echo.
-set /p "CHOICE=请选择操作 [0-8]: "
+set /p "CHOICE=请选择操作 [0-9]: "
 
 if "%CHOICE%"=="1" goto CLONE_REPO
 if "%CHOICE%"=="2" goto INIT_REPO
@@ -41,6 +42,7 @@ if "%CHOICE%"=="5" goto SMART_PUSH
 if "%CHOICE%"=="6" goto GEN_TREE
 if "%CHOICE%"=="7" goto NPM_DEV
 if "%CHOICE%"=="8" goto FULL_WORKFLOW
+if "%CHOICE%"=="9" goto ROLLBACK_LOCAL
 if "%CHOICE%"=="0" goto END_PROGRAM
 
 echo [ERROR] 无效的选择，请重新输入！
@@ -53,6 +55,145 @@ echo.
 echo 感谢使用，再见！
 timeout /t 1 >nul
 exit /b 0
+
+:: ========== 9. 本地回滚到远程版本（救急专用）==========
+:ROLLBACK_LOCAL
+color 0E
+cls
+echo.
+echo ===========================================
+echo    【本地回滚到远程版本】
+echo    功能说明：把本地文件强制恢复为远程最新状态
+echo    适用场景：本地改崩了 / 想放弃本地修改 / 代码冲突搞不定
+echo    ?? 警告：本地未提交的修改将全部丢失！
+echo ===========================================
+echo.
+
+:: 检测当前目录是否是 Git 仓库
+if not exist .git (
+    echo [ERROR] 当前目录不是 Git 仓库！
+    echo [INFO] 请先进入你的项目文件夹，或选择菜单【1】克隆仓库
+    pause
+    goto MAIN_MENU
+)
+
+echo [INFO] 当前路径: %CD%
+echo.
+
+:: 显示当前 Git 身份
+echo -------------------------------------------
+echo 当前 Git 身份：
+git config user.name 2>nul && call echo   用户名: %%user.name%% || echo   用户名: 未设置
+git config user.email 2>nul && call echo   邮  箱: %%user.email%% || echo   邮  箱: 未设置
+echo -------------------------------------------
+echo.
+
+:: 显示当前分支和远程信息
+for /f "tokens=*" %%b in ('git symbolic-ref --short HEAD 2^>nul') do set "CUR_BRANCH=%%b"
+if "%CUR_BRANCH%"=="" set "CUR_BRANCH=main"
+echo [INFO] 当前分支: %CUR_BRANCH%
+echo.
+
+:: 显示远程仓库列表
+echo [INFO] 检测到以下远程仓库：
+git remote -v 2>nul
+if %errorlevel% neq 0 (
+    echo   未配置任何远程仓库！
+    echo [ERROR] 没有远程仓库，无法回滚！
+    pause
+    goto MAIN_MENU
+)
+echo.
+
+:: 让用户选择远程仓库
+echo 请选择要回滚到的远程仓库：
+echo   提示: 输入远程名称（通常是 origin）
+set /p "REMOTE_NAME=远程名称（直接回车使用 origin）: "
+if "%REMOTE_NAME%"=="" set "REMOTE_NAME=origin"
+
+:: 验证远程是否存在
+git remote 2>nul | findstr /i /c:"%REMOTE_NAME%" >nul
+if %errorlevel% neq 0 (
+    echo [ERROR] 远程 '%REMOTE_NAME%' 不存在！
+    echo [INFO] 可用远程列表：
+    git remote
+    pause
+    goto MAIN_MENU
+)
+
+:: 获取远程分支名
+for /f "tokens=*" %%u in ('git remote show %REMOTE_NAME% 2^>nul ^| findstr /i "HEAD branch"') do (
+    for /f "tokens=3" %%h in ("%%u") do set "REMOTE_BRANCH=%%h"
+)
+if "%REMOTE_BRANCH%"=="" set "REMOTE_BRANCH=main"
+
+echo [INFO] 目标远程: %REMOTE_NAME%/%REMOTE_BRANCH%
+echo.
+
+:: 二次确认
+echo ===========================================
+echo ??  即将执行以下操作：
+echo    1. 暂存当前本地修改（可选）
+echo    2. 强制将本地文件恢复为 %REMOTE_NAME%/%REMOTE_BRANCH% 的最新状态
+echo    3. 本地所有未提交的修改将被覆盖
+echo ===========================================
+echo.
+choice /C YN /N /M "确认回滚？(Y=确认 / N=取消): "
+if %errorlevel%==2 (
+    echo [INFO] 已取消回滚
+    pause
+    goto MAIN_MENU
+)
+
+:: 询问是否先 stash 本地修改
+echo.
+echo [INFO] 是否先保存本地修改到 stash？（以后可以恢复）
+choice /C YN /N /M "保存本地修改？(Y=保存 / N=直接丢弃): "
+if %errorlevel%==1 (
+    echo [INFO] 正在 stash 本地修改...
+    git stash push -m "工具箱自动保存: %DATE% %TIME%"
+    if %errorlevel% equ 0 (
+        echo [SUCCESS] 本地修改已保存到 stash
+        echo [INFO] 以后恢复请执行: git stash pop
+    ) else (
+        echo [WARN] stash 失败，可能没有需要保存的修改
+    )
+) else (
+    echo [INFO] 直接丢弃本地修改...
+)
+
+echo.
+echo [INFO] 正在从远程获取最新版本...
+git fetch %REMOTE_NAME% %REMOTE_BRANCH%
+if %errorlevel% neq 0 (
+    echo [ERROR] 获取远程版本失败！请检查网络连接
+    pause
+    goto MAIN_MENU
+)
+
+echo [INFO] 正在强制回滚本地文件...
+git reset --hard %REMOTE_NAME%/%REMOTE_BRANCH%
+if %errorlevel% neq 0 (
+    echo [ERROR] 回滚失败！
+    pause
+    goto MAIN_MENU
+)
+
+echo.
+echo ===========================================
+echo [SUCCESS] 回滚完成！
+echo ===========================================
+echo 本地文件已恢复为 %REMOTE_NAME%/%REMOTE_BRANCH% 的最新状态
+echo.
+for /f "tokens=*" %%c in ('git log -1 --oneline') do echo 最新提交: %%c
+echo.
+if %errorlevel% equ 0 (
+    echo [INFO] 如需查看 stash 列表: git stash list
+    echo [INFO] 如需恢复刚才的修改: git stash pop
+)
+echo ===========================================
+pause
+goto MAIN_MENU
 
 :: ========== 1. 克隆仓库 ==========
 :CLONE_REPO
@@ -95,22 +236,19 @@ call :AUTO_CONFIGURE "%USER%" "%REPO%"
 pause
 goto MAIN_MENU
 
-:: ========== 2. 初始化本地仓库（优化逻辑）==========
+:: ========== 2. 初始化本地仓库 ==========
 :INIT_REPO
 color 0F
-:: 检测是否在桌面
 echo "%CD%" | find /i "Desktop" >nul
 if %errorlevel%==0 goto BLOCK_DESKTOP
 echo "%CD%" | find /i "桌面" >nul
 if %errorlevel%==0 goto BLOCK_DESKTOP
 
-:: 如果不是Git仓库，直接初始化
 if not exist .git (
     echo [INFO] 当前目录不是Git仓库，开始初始化...
     goto DO_INIT
 )
 
-:: 如果是Git仓库，询问用户是否重新初始化
 echo [WARN] 当前目录已是 Git 仓库
 choice /C YN /N /M "是否删除后重新初始化？(Y/N): "
 if %errorlevel%==2 goto MAIN_MENU
@@ -191,7 +329,7 @@ git config user.email
 pause
 goto MAIN_MENU
 
-:: ========== 4. 添加远程地址（融合原始逻辑）==========
+:: ========== 4. 添加远程地址 ==========
 :ADD_REMOTE
 color 0F
 if not exist .git (
@@ -256,7 +394,7 @@ echo ===========================================
 pause
 goto MAIN_MENU
 
-:: ========== 5. 智能推送【修复URL解析】==========
+:: ========== 5. 智能推送 ==========
 :SMART_PUSH
 color 0F
 if not exist .git (
@@ -279,13 +417,11 @@ if %errorlevel% neq 0 (
 echo ===========================================
 echo.
 
-:: 获取当前分支
 for /f "tokens=*" %%b in ('git symbolic-ref --short HEAD 2^>nul') do set "BRANCH=%%b"
 if "%BRANCH%"=="" set "BRANCH=main"
 echo 当前分支: %BRANCH%
 echo.
 
-:: 【修复】让用户选择要使用的远程仓库，并改进检测
 echo 请选择要使用的远程仓库：
 echo   提示: 根据上面的列表，输入远程名称（如 origin, ssh, https）
 set /p "REMOTE_NAME=输入远程名称（直接回车使用origin）: "
@@ -293,7 +429,6 @@ if "%REMOTE_NAME%"=="" (
     set "REMOTE_NAME=origin"
 )
 
-:: 【修复】改进远程存在性检测（不使用正则锚点）
 git remote 2>nul | findstr /i /c:"%REMOTE_NAME%" >nul
 if %errorlevel% neq 0 (
     echo [ERROR] 远程 '%REMOTE_NAME%' 不存在！
@@ -303,7 +438,6 @@ if %errorlevel% neq 0 (
     goto MAIN_MENU
 )
 
-:: 获取并显示远程的协议信息
 for /f "tokens=2" %%u in ('git remote -v ^| findstr /i "%REMOTE_NAME%.*fetch"') do set "CURRENT_URL=%%u"
 if "%CURRENT_URL%"=="" (
     echo [ERROR] 无法获取远程地址
@@ -311,7 +445,6 @@ if "%CURRENT_URL%"=="" (
     goto MAIN_MENU
 )
 
-:: 【新增】验证URL格式是否完整
 echo "%CURRENT_URL%" | findstr /i ".git" >nul
 if %errorlevel% neq 0 (
     echo [ERROR] 远程URL格式不正确: %CURRENT_URL%
@@ -327,7 +460,6 @@ echo "%CURRENT_URL%" | findstr /i "git@" >nul && set "CURRENT_PROTO=SSH"
 echo [INFO] 远程 '%REMOTE_NAME%' 的协议是: %CURRENT_PROTO%
 echo.
 
-:: 选择推送协议
 echo 推送协议选择：
 echo   按下 H = HTTPS
 echo   按下 S = SSH
@@ -338,7 +470,6 @@ if %errorlevel%==1 (
     set "PUSH_PROTO=ssh"
 )
 
-:: 如果需要，转换协议
 if not "%CURRENT_PROTO%"=="%PUSH_PROTO%" (
     echo [WARN] 协议不匹配（远程%CURRENT_PROTO% vs 选择%PUSH_PROTO%），正在转换...
     setlocal enabledelayedexpansion
@@ -354,13 +485,11 @@ if not "%CURRENT_PROTO%"=="%PUSH_PROTO%" (
 echo [INFO] 使用远程: %REMOTE_NAME%"
 echo [INFO] 远程地址: %CURRENT_URL%"
 
-:: 排除 node_modules
 if exist node_modules (
     echo [INFO] 检测到 node_modules，自动从Git跟踪中剔除...
     git rm -r --cached node_modules 2>nul
 )
 
-:: 提交和推送
 set /p "COMMIT_MSG=提交信息 (回车=update): "
 if "%COMMIT_MSG%"=="" set "COMMIT_MSG=update"
 
@@ -479,7 +608,6 @@ timeout /t 2 >nul
 start cmd /k "title DEV Server & npm run dev"
 goto MAIN_MENU
 
-:: 辅助函数：添加dev脚本
 :ADD_DEV_SCRIPT
 powershell -NoP -C ^
   "$p=Get-Content package.json -Raw | ConvertFrom-Json; $" ^
