@@ -159,6 +159,7 @@ const config = {
 		{ go: "🎨 前往", img: "https://cdn.magicalapk.com/square/1814706510054513.jpg", title: "自建临时邮件有项目但是不太成功", subtitle: "短巷与雨那里学的", text: "https://docs.moemail.app/start.html这个是官方文档。失败的主要原因是因为我没有顶级域名，我的那个lilys.top域名托管不到cloudflare上面，就不行了。。202602130029。备用地址：https://mail.224418.xyz/", url: "https://tsmail.cc.cd/", show: false },
 		{ go: "📝 前往", img: "https://cdn.magicalapk.com/square/4216147013152665.jpg", title: "本站数据报", subtitle: "用的是51.la统计，还是太好用啦，哈哈哈！", text: "不要再点错啦！点前往哦", url: "https://v6.51.la/s/4e15gMExaC7sDLm", show: false },
 		{ go: "💍 前往", img: "https://cdn.magicalapk.com/square/4215654891397632.jpg", title: "站点监控", subtitle: "网站的近三个月运行状态监控", text: "这里面可以看我的各个站点的运行状态，于20260413 19：10 集齐 ", url: "https://stats.uptimerobot.com/Ds2t1icxJ3", show: false },	
+	    { go: "🍁 前往", img: "https://cdn.magicalapk.com/square/7161493637336490.jpg", title: "花体转换", subtitle: "可以将英文字母转换成花哨俏皮的字样", text: "欢迎尝试一下哦！2026/5/17 21:29 Kimi制作", url: "https://www.224418.xyz/tools/flower-text", show: false },	
 	],
 
 	statement: ["Copyright © 2025-2026 TangShiMei"],
