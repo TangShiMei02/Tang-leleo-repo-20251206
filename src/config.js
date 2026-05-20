@@ -151,7 +151,7 @@ const config = {
 
 	//项目卡片 其中 字段"show"控制初始卡片的text是否展开
 	projectcards: [
-		{ go: "🔍 前往", img: "https://cdn.magicalapk.com/square/3185866214923561.jpg", title: "博客", subtitle: "这里是 傥师妹TangShiMei的小空间 ，欢迎点进来支持一下啊", text: "摘下最喜欢的麦穗，然后闭着眼走过整片麦田。", url: " https://blog.224418.xyz/  ", show: false },
+		{ go: "🔍 前往", img: "https://cdn.magicalapk.com/square/3185866214923561.jpg", title: "傥师妹TangShiMei的小空间", subtitle: "这里是 傥师妹TangShiMei的小空间 ，我的博客，欢迎点进来支持一下啊", text: "摘下最喜欢的麦穗，然后闭着眼走过整片麦田。", url: " https://blog.224418.xyz/  ", show: false },
 		{ go: "🚀 前往", img: "/img/project-img/IMG_4532.webp", title: "留言板", subtitle: "欢迎留言啊！", text: "想说啥就说，别不说，中不中？真diss！！", url: "https://blog.224418.xyz/comments/", show: false },     //  👉  /deployed-projects/leave-a-message.html  👈 这个是本地的一个留言页面，回来前面那个url不能用了就先用这个
 		{ go: "🗂️ 前往", img: "https://cdn.magicalapk.com/square/1795785466589260.jpg", title: "我的旧秘密基地", subtitle: "点击下面这个前往我那个不成熟，稚嫩的秘密基地", text: "点错啦，是左边那个 🗂️前往 按钮哦！！", url: "https://tangshimei02.github.io/", show: false },
 		{ go: "👍 前往", img: "https://cdn.magicalapk.com/square/5678758882812622.jpg", title: "一个自建的图床", subtitle: "cloudflare＋纸飞机实现的", text: "点击那个前往按钮啦，可以尝试一下哦！！20260107 1613", url: "https://pic.224418.xyz/", show: false },
