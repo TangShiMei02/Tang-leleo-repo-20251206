@@ -2,8 +2,8 @@ const config = {
 	//网页元数据
 	metaData: {
 		title: '傥师妹TangShiMei的个人主页',
-		description: '我叫TangShiMei(傥师妹),很高兴认识你们。一枚25级交通工程(机场方向)大学生。很喜欢的一句话是：“摘下最喜欢的麦穗，然后闭着眼走过整片麦田。”个人博客是 https://blog.224418.xyz/',
-		keywords: 'TangShiMei,TangShiMei,个人主页,个人网站',
+		description: '哈喽！我是傥师妹TangShiMei，这里是我的个人主页，汇集了博客、图床、友链朋友圈等各种小工具。我的博客 傥师妹TangShiMei的小空间 https://blog.224418.xyz/ 经常发布日记、校园生活和碎碎念，欢迎大家来访！主页内容借用了 GitHub 大佬 lelo886 的开源项目。',
+		keywords: '傥师妹,TangShiMei,中航大,CAUC,25级大学生,个人主页,交通工程,博客',
 		icon: '/img/favicon.ico'   //网页图标，支持外链
 	},
 
