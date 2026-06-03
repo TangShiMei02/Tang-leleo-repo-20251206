@@ -160,6 +160,9 @@ const config = {
 		{ go: "📝 前往", img: "https://cdn.magicalapk.com/square/4216147013152665.jpg", title: "本站数据报", subtitle: "用的是51.la统计，还是太好用啦，哈哈哈！", text: "不要再点错啦！点前往哦", url: "https://cloud.umami.is/share/fya5BXIncGyZXxRV", show: false },  // 51LA路边一条，不用了，我还怕你给我跳转小广告网站呢，用新的这个了，要是最后都不行，我就用GitHub开源的自建数据统计了，这是我的底线了。2026/5/21 22:17  https://v6.51.la/s/4e15gMExaC7sDLm
 		{ go: "💍 前往", img: "https://cdn.magicalapk.com/square/4215654891397632.jpg", title: "站点监控", subtitle: "网站的近三个月运行状态监控", text: "这里面可以看我的各个站点的运行状态，于20260413 19：10 集齐 ", url: "https://stats.uptimerobot.com/Ds2t1icxJ3", show: false },	
 	    { go: "🍁 前往", img: "https://cdn.magicalapk.com/square/7161493637336490.jpg", title: "花体转换", subtitle: "可以将英文字母转换成花哨俏皮的字样", text: "欢迎尝试一下哦！2026/5/17 21:29 Kimi制作 ", url: "https://www.224418.xyz/tools/flower-text.html", show: false },	
+		{ go: "📖 前往", img: "https://cdn.magicalapk.com/square/8632654405260562.jpeg", title: "一个hexobutterfly md文章编辑器", subtitle: "现在还只是能用的状态，bug和可以优化的地方可能很多，在GitHub仓库放了源码。——2026/6/3 22:01 ", text: "Kimi做的，感觉能用，但是一滚动好占GPU，不知道为啥，也不知道怎么优化，就先这样子把。——2026/6/3 22:03 ", url: "https://editor.224418.xyz/", show: false },	
+		{ go: "🎲 前往", img: "https://cdn.magicalapk.com/square/8633393281099456.png", title: "中航大一言", subtitle: "虽然说是中航大一言，但还都是我自己上传的语录罢了，可以当作一个自己的语录集锦，能做api。", text: "用小兔互联的主机弄得一个一言小项目，感觉还不错吧，也是Kimi帮着弄的。——2026/6/3 22:17", url: "https://b.lilys.top/yiyan", show: false },	
+		//{ go: "💤 前往", img: "https://pic.224418.xyz/file/1780287279967_【哲风壁纸】NASA-地球-太空.png", title: "待开发的小玩意", subtitle: "我站在今天设想过去又幻想未来，过去和未来在今天随意交叉，因而过去和未来都刮着今天的风", text: "如果你看见了这行字，那说明我已经设法引起了你的注意。——2026/6/3 22:11", url: "https://www.224418.xyz/", show: false },
 	],
 
 	statement: ["Copyright © 2025-2026 TangShiMei"],
