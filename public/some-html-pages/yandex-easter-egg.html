@@ -3,18 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Yandex 被取缔啦！</title>
+  <title>Yandex</title>
 
-  <!-- 引入你主页的字体 -->
   <style>
     @font-face {
       font-family: "myfont";
       src: url("/fonts/faken.ttf") format("truetype");
-      font-display: swap;
-    }
-    @font-face {
-      font-family: "digitalfont";
-      src: url("/fonts/Digital-Play-Italic-St-1.ttf") format("truetype");
       font-display: swap;
     }
 
@@ -24,71 +18,268 @@
       box-sizing: border-box;
     }
 
+    :root {
+      --bg: #0a0a0b;
+      --fg: #e8e6e3;
+      --muted: #6b6b6b;
+      --accent: #c9a96e;
+      --accent-dim: rgba(201, 169, 110, 0.08);
+      --surface: rgba(255, 255, 255, 0.03);
+      --border: rgba(255, 255, 255, 0.06);
+    }
+
+    html, body {
+      height: 100%;
+    }
+
     body {
-      background-color: #282c34; /* 和你主页一致 */
-      min-height: 100vh;
+      background: var(--bg);
       display: flex;
       justify-content: center;
       align-items: center;
+      font-family: "myfont", "PingFang SC", "Microsoft YaHei", sans-serif;
+      color: var(--fg);
       overflow: hidden;
-      font-family: "myfont", sans-serif;
+      -webkit-font-smoothing: antialiased;
     }
 
-    .easter-egg-container {
+    /* ===== 极淡噪点纹理（静态，零性能开销） ===== */
+    .grain {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      opacity: 0.02;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    }
+
+    /* ===== 主容器 ===== */
+    .container {
+      position: relative;
+      z-index: 1;
       text-align: center;
-      padding: 2rem;
-      max-width: 90%;
-      animation: fadeIn 1s ease forwards, float 3s ease-in-out infinite;
+      padding: 3rem 2rem;
+      max-width: 520px;
+      width: 90%;
       opacity: 0;
+      animation: enter 1s ease forwards;
     }
 
-    .easter-egg-title {
-      font-family: "digitalfont", monospace;
-      font-size: clamp(1.5rem, 5vw, 3rem);
-      color: #00f3ff; /* 青蓝色，类似终端光 */
-      text-shadow:
-        0 0 8px #00f3ff,
-        0 0 16px #00a2ff,
-        0 0 24px rgba(0, 162, 255, 0.5);
-      line-height: 1.4;
-      letter-spacing: 2px;
-      animation: glitch 2s infinite alternate-reverse;
+    @keyframes enter {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    /* 入场淡入 */
+    /* ===== 装饰线 ===== */
+    .divider {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, transparent, var(--accent), transparent);
+      margin: 0 auto 2rem;
+      opacity: 0.3;
+    }
+
+    /* ===== 主标题 ===== */
+    .title {
+      font-size: clamp(1.5rem, 5vw, 2.2rem);
+      font-weight: 400;
+      line-height: 1.6;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.8rem;
+    }
+
+    .title .line {
+      display: block;
+      overflow: hidden;
+    }
+
+    .title .line span {
+      display: inline-block;
+      transform: translateY(100%);
+      animation: reveal 0.7s ease forwards;
+    }
+
+    .title .line:nth-child(1) span { animation-delay: 0.2s; }
+    .title .line:nth-child(2) span { animation-delay: 0.4s; }
+    .title .line:nth-child(3) span { animation-delay: 0.6s; }
+
+    @keyframes reveal {
+      to { transform: translateY(0); }
+    }
+
+    /* ===== 副文本 ===== */
+    .subtitle {
+      font-size: 0.8rem;
+      color: var(--muted);
+      letter-spacing: 0.12em;
+      margin-bottom: 2.5rem;
+      opacity: 0;
+      animation: fadeIn 0.8s ease 1s forwards;
+    }
+
     @keyframes fadeIn {
       to { opacity: 1; }
     }
 
-    /* 轻微浮动 */
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+    /* ===== 交互区域 ===== */
+    .interaction {
+      opacity: 0;
+      animation: fadeIn 0.8s ease 1.3s forwards;
     }
 
-    /* 故障闪烁效果（轻微） */
-    @keyframes glitch {
-      0% { text-shadow: 0 0 8px #00f3ff, 0 0 16px #00a2ff; }
-      2% { text-shadow: 2px 0 8px #ff00c8, -2px -2px 8px #00f3ff; }
-      4% { text-shadow: -2px 0 8px #00f3ff, 2px 2px 8px #00a2ff; }
-      100% { text-shadow: 0 0 8px #00f3ff, 0 0 16px #00a2ff; }
+    .hint {
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.12em;
+      margin-bottom: 1.2rem;
     }
 
-    /* 手机适配 */
-    @media (max-width: 600px) {
-      .easter-egg-title {
-        font-size: clamp(1.2rem, 6vw, 2rem);
-        padding: 0 1rem;
+    /* ===== 输入框 ===== */
+    .input-wrap {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .input-wrap input {
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.8rem 1rem;
+      padding-right: 2.2rem;
+      color: var(--fg);
+      font-family: inherit;
+      font-size: 0.85rem;
+      letter-spacing: 0.02em;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    .input-wrap input::placeholder {
+      color: var(--muted);
+      opacity: 0.5;
+    }
+
+    .input-wrap input:focus {
+      border-color: var(--accent);
+    }
+
+    .input-wrap .icon {
+      position: absolute;
+      right: 0.9rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      font-size: 0.8rem;
+      pointer-events: none;
+      opacity: 0.4;
+    }
+
+    /* ===== 反馈文字 ===== */
+    .feedback {
+      margin-top: 1.5rem;
+      min-height: 1.4em;
+      font-size: 0.8rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      transition: color 0.3s ease;
+    }
+
+    .feedback.active {
+      color: var(--accent);
+    }
+
+    /* ===== 底部信息 ===== */
+    .footer {
+      position: fixed;
+      bottom: 1.5rem;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 0.6rem;
+      color: var(--muted);
+      opacity: 0.3;
+      letter-spacing: 0.15em;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* ===== 响应式 ===== */
+    @media (max-width: 480px) {
+      .container {
+        padding: 2rem 1.2rem;
+      }
+      .divider {
+        height: 32px;
+        margin-bottom: 1.5rem;
       }
     }
   </style>
+<base target="_blank">
 </head>
 <body>
-  <div class="easter-egg-container">
-    <div class="easter-egg-title">
-      哈哈哈，想不到吧，zhu！<br/>
-      我已经将这里取缔了！！
+  <div class="grain"></div>
+
+  <div class="container">
+    <div class="divider"></div>
+
+    <h1 class="title">
+      <span class="line"><span>想不到吧</span></span>
+      <span class="line"><span>Yandex 已被取缔</span></span>
+      <span class="line"><span>这里我说了算</span></span>
+    </h1>
+
+    <p class="subtitle">— TangShiMei 专属彩蛋 —</p>
+
+    <div class="interaction">
+      <p class="hint">输入任意内容，按回车看看</p>
+      <div class="input-wrap">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="搜索已被接管..."
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <span class="icon">↵</span>
+      </div>
+      <p class="feedback" id="feedback"></p>
     </div>
   </div>
+
+  <div class="footer">傥师妹的小空间 · 彩蛋 #001</div>
+
+  <script>
+    const input = document.getElementById('search-input');
+    const feedback = document.getElementById('feedback');
+    const responses = [
+      "搜索？这里没有搜索。",
+      "Yandex 已经不存在了。",
+      "别试了，这里归我管。",
+      "你输入什么都不会有结果的。",
+      "这就是个彩蛋，认真你就输了。",
+      "傥师妹 1:0 Yandex",
+      "此路不通，请返回主页。",
+      "检测到非法搜索行为，已拦截。"
+    ];
+    let responseIndex = 0;
+
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        const val = input.value.trim();
+        if (!val) return;
+
+        feedback.classList.add('active');
+        feedback.textContent = responses[responseIndex];
+        responseIndex = (responseIndex + 1) % responses.length;
+        input.value = '';
+      }
+    });
+
+    // 自动聚焦，无动画循环
+    setTimeout(() => input.focus(), 1500);
+  </script>
 </body>
 </html>
