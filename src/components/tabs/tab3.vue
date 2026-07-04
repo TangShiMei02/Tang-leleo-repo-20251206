@@ -10,7 +10,7 @@
              <v-avatar
               color=var(--leleo-vcard-color)
               rounded="0"
-              :image="currentSong.pic"
+              :image="currentSong.pic || '/img/avatar02.jpg'"
               :size="xs?48:64"
             ></v-avatar>
             <v-btn icon @click="togglePlay" :size="xs?28:38" variant= 'tonal' class="ml-1">
